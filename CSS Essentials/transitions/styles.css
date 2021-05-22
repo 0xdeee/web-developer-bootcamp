@@ -1,0 +1,39 @@
+.circle {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+  transition: background-color 1s 5s, border-radius 2s 7s;
+}
+
+.circle:hover {
+  background-color: aqua;
+  border-radius: 50%;
+}
+
+section div {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  margin: 50px;
+  transition: margin-left 1s;
+}
+
+section:hover div {
+  margin-left: 500px;
+}
+
+div:nth-of-type(1) {
+  transition-timing-function: ease-out;
+}
+
+div:nth-of-type(2) {
+  transition-timing-function: ease-in-out;
+}
+
+div:nth-of-type(3) {
+  transition-timing-function: linear;
+}
+
+div:nth-of-type(4) {
+  transition-timing-function: ease;
+}

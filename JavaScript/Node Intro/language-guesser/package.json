@@ -1,0 +1,15 @@
+{
+  "name": "language-guesser",
+  "version": "1.0.0",
+  "description": "just a fun flick, if you send a string it will return what language it is.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "D",
+  "license": "ISC",
+  "dependencies": {
+    "franc": "^5.0.0",
+    "langs": "^2.0.0"
+  }
+}

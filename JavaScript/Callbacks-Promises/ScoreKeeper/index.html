@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Score Keeper</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+</head>
+
+<body>
+	<section class="section">
+		<section class="container">
+			<div class="columns">
+				<div class="column is-half is-offset-one-quarter">
+					<div class="card">
+						<div class="card-image">
+							<figure class="image is-2by1">
+								<img
+									src="https://images.unsplash.com/photo-1614058584413-2d6c23b3ad39?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1557&q=80"
+									alt="Badminton Shuttle">
+							</figure>
+						</div>
+						<div class="card-header is-justify-content-center">
+							<p class="card-header-title">
+								Badminton Score Keeper
+							</p>
+						</div>
+						<div class="card-content">
+							<div class="columns">
+								<div class="column is-flex" style="justify-content: center;">
+									<span class="is-size-2">
+										<span id="score1">0</span>
+										<span class="is-size-4">-</span>
+										<span id="score2">0</span>
+									</span>
+								</div>
+								<div class="column">
+									<p class="subtitles is-6">Please choose a type:</p>
+									<div class="control pt-2">
+										<label class="radio">
+											<input type="radio" id="singlesType" name="type" value="singles">
+											singles
+										</label>
+										<label class="radio">
+											<input type="radio" id="doublesType" name="type" value="doubles">
+											doubles
+										</label>
+									</div>
+								</div>
+							</div>
+							<p class="subtitle is-6">
+								Use the buttons below to update scores!
+							</p>
+						</div>
+						<div class="card-footer py-2" style="justify-content: space-evenly;">
+							<button id="player1ScoreBtn" class="button is-primary" disabled>Select Type</button>
+							<button id="player2ScoreBtn" class="button is-info" disabled>Select Type</button>
+							<button id="resetBtn" class="button is-danger">Reset</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+
+
+	<script src="app.js"></script>
+</body>
+
+</html>
