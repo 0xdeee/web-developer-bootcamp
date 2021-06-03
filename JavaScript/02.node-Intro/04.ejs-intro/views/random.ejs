@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random <%= rand %> </title>
+</head>
+
+<body>
+
+  <!-- using ejs evaluation operator -->
+  <!-- <h1><%= Math.floor(Math.random() * 10) + 1 %></h1> -->
+
+  <h1>The Random Number is: <%= rand %></h1>
+  <% if (rand % 2 === 0) { %>
+  <h2>The random number is even!</h2>
+  <% } else { %>
+  <h2>The random number is odd!</h2>
+  <% } %>
+
+  <h3>The random number is <%= (rand % 2 ===0) ? 'Even' : 'Odd' %>! </h3>
+
+</body>
+
+</html>
