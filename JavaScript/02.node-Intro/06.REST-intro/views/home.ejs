@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/header') %>
+<h1>REST</h1>
+<form action="http://localhost:8080/buy" method="POST">
+  <label for="crypto">Crypto: </label>
+  <input type="text" name="crypto" id="crypto">
+  <label for="qty">Quantity:</label>
+  <input type="number" name="qty" id="qty">
+  <input type="submit" value="Buy">
+</form>
+<%- include('partials/footer') %>
