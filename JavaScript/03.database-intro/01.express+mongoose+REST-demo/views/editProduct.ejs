@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit product</title>
+</head>
+
+<body>
+  <h1>edit product</h1>
+  <form action="/products/<%=product._id%>?_method=PATCH" method="post">
+    <label for="name">name</label>
+    <input type="text" name="name" id="name" placeholder="<%= product.name %>"> <br>
+    <label for="price">price</label>
+    <input type="number" name="price" id="price" placeholder="<%= product.price %>"> <br>
+    <label for="category">category</label>
+    <input type="radio" name="category" id="category" value="fruit"> fruit
+    <input type="radio" name="category" id="category" value="vegetable"> vegetable
+    <input type="radio" name="category" id="category" value="dairy"> dairy
+    <br>
+    <button>submit</button>
+  </form>
+  <br><br>
+  <a href="/products">home</a>
+</body>
+
+</html>

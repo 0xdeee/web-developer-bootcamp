@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Products</title>
+</head>
+
+<body>
+  <h1>List of all products</h1>
+  <form action="/products" method="get">
+    <input type="radio" name="category" id="category" value="fruit"> fruit
+    <input type="radio" name="category" id="category" value="vegetable"> vegetable
+    <input type="radio" name="category" id="category" value="dairy">dairy
+    &nbsp;
+    <button>filter</button>
+  </form>
+  <table border="1px solid">
+    <tr>
+      <th>Product Name</th>
+      <th>view</th>
+      <th>action</th>
+    </tr>
+    <% allProducts.forEach(element=> { %>
+      <tr>
+        <td>
+          <%= element.name %>
+        </td>
+        <td>
+          <a href="/products/<%=element._id%>">click here!</a>
+        </td>
+        <td>
+          <form action="/products/<%=element._id%>?_method=DELETE" method="post">
+            <button>delete</button>
+          </form>
+        </td>
+      </tr>
+      <% }) %>
+  </table>
+  <br><br>
+  <a href="/products/new">add new product</a>
+</body>
+
+</html>
