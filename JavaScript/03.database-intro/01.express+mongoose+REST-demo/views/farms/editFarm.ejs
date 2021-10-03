@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit farm</title>
+</head>
+
+<body>
+  <h1>edit farm</h1>
+  <form action="/farms/<%=farm._id%>?_method=PATCH" method="post">
+    <label for="name">name</label>
+    <input type="text" name="name" id="name" placeholder="<%= farm.name %>"> <br>
+    <label for="city">city</label>
+    <input type="text" name="city" id="city" placeholder="<%= farm.city %>"> <br>
+    <label for="email">email</label>
+    <input type="email" name="email" id="email" placeholder="<%= farm.email %>"> <br>
+    <br>
+    <button>submit</button>
+  </form>
+  <br><br>
+  <a href="/farms">home</a>
+</body>
+
+</html>

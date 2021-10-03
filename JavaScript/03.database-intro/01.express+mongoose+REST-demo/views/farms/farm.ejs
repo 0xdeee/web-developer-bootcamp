@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= farm.name %>
+  </title>
+</head>
+
+<body>
+  <table border="1px solid">
+    <tr>
+      <th>Farm ID</th>
+      <th>Farm Name</th>
+      <th>Farm City</th>
+      <th>Farm Email</th>
+    </tr>
+    <tr>
+      <td>
+        <%= farm._id %>
+      </td>
+      <td>
+        <%= farm.name %>
+      </td>
+      <td>
+        <%= farm.city %>
+      </td>
+      <td>
+        <%= farm.email %>
+      </td>
+    </tr>
+  </table>
+
+  <br><br>
+
+  <% if (farm.products) { %>
+    <table border="1px solid">
+      <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product City</th>
+        <th>Product Email</th>
+      </tr>
+      <% farm.products.forEach(element=> { %>
+        <tr>
+          <td>
+            <%= element._id %>
+          </td>
+          <td>
+            <%= element.name %>
+          </td>
+          <td>
+            <%= element.price %>
+          </td>
+          <td>
+            <%= element.category %>
+          </td>
+        </tr>
+        <% }) %>
+    </table>
+    <% } %>
+
+
+      <br><br>
+      <a href="/farms/<%=farm._id%>/edit">edit farm</a>
+      <br><br>
+      <a href="/farms/<%=farm._id%>/products/new">add Products</a>
+      <br><br>
+      <a href="/farms">home</a>
+</body>
+
+</html>

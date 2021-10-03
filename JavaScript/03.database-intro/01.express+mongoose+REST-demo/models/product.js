@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { stringify } = require('querystring');
 
 const productSchema = new mongoose.Schema({
   name: {
@@ -9,12 +8,17 @@ const productSchema = new mongoose.Schema({
   price: {
     type: Number,
     required: true,
+    min: 0,
   },
   category: {
     type: String,
     lowercase: true,
     enum: ['fruit', 'vegetable', 'dairy'],
     required: true,
+  },
+  farm: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Farm',
   },
 });
 

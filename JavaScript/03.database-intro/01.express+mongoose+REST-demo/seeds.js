@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { db } = require('./models/product');
 const Product = require('./models/product');
 
 mongoose
@@ -31,12 +32,19 @@ const seedData = [
     category: 'dairy',
   },
   {
-    name: 'pomogranate',
+    name: 'pomegranate',
     price: 8.99,
     category: 'fruit',
   },
 ];
 
-Product.insertMany(seedData)
-  .then((res) => console.log(res))
+Product.deleteMany({})
+  .then(() => {
+    Product.insertMany(seedData)
+      .then((res) => {
+        console.log(res);
+        db.close();
+      })
+      .catch((err) => console.error(err));
+  })
   .catch((err) => console.error(err));
